@@ -1,21 +1,104 @@
-/**index.wxss**/
-.userinfo {
+.banner {
+  height: 410rpx ;
+  background-size: cover;
+  background-position: center;
+  padding: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+h2 {
+  font-family: 'Gill Sans MT';
+  font-weight: bold;
+  font-size: 44rpx;
+  color: #FFFFFF;
+  position: absolute;
+  left: 50rpx;
+  bottom: 50rpx;
+  text-align: left;
+}
+
+h3 {
+  font-family: 'Gill Sans MT';
+  font-weight: 900;
+  font-size: 33rpx;
+  color: #37474F;
+}
+
+h4 {
+  color: #37474F;
+  font-weight: 500;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.view-2columns {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 30rpx;
+  padding: 10rpx 0;
+}
+
+.individual-makerspace {
   display: flex;
   flex-direction: column;
+  align-items: left;
+}
+
+.individual-makerspace > image {
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 7rpx;
+  width: 42vw;
+  height: 18vh;
+  margin-bottom: 10rpx;
+}
+
+.sub-header {
+  color: #37474F;
+  font-weight: 300;
+  font-size: 22rpx;
+  line-height: 30rpx;
+  margin: 0;
+}
+
+.sub-text {
+  color: #37474F;
+  font-weight: 300;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+
+text {
+  color: #37474F;
+  font-weight: 300;
+  font-size: 30rpx;
+  margin: 10rpx auto;
+}
+
+.icon {
+height: 70rpx;
+width: 70rpx;
+}
+
+.tool-icon {
+  display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.tool-text {
+  padding: 0;
+  margin: 0 20rpx;
+  font-size: 30rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.box-element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30rpx;
 }
