@@ -1,6 +1,7 @@
 <!--index.wxml-->
 
-<view class="banner" style="background-image: url('https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/13314edfad268fc7c47b/banner.png');">
+<view class="banner"      style="background-image: url('https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/13314edfad268fc7c47b/banner.png');">
+
 </view>
 
 <view class="container">

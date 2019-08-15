@@ -1,0 +1,17 @@
+<view class="container">
+    
+    <view class="view-2columns" >
+      <input type="text" placeholder="Shengzhen"/>
+        <button class="button-full" bindtap="goToSpecificSpace">Search</button>
+    </view>
+    
+    <view>
+      <image class="map-box" src="https://www.google.com/maps/vt/data=-MeOIimziPDe9_uY976Zm71O8lnvFkyRc8_i7ONKqbEbv3Kh-m3uNXHzfuslyI1O2PQ1B-ks3RikLFc49EoCQTmzdMLN_KJaBRYUNFVhjIXWXP_YCF7xm98Vwd30Zh0YiSsL9ptjeEa9s5q-rMF7M548u7gbrA1PbFtz40j1Jt_KGwCGcI-VMstJlpZV6OEWTJxHZ5f3K4MuooqUjsRKLtDaSyRmJIxCHI4-FszRPmY4bFlW-EI-pviBc9EF8LmC7Y5MhHBzs2-AoFsVlQCKUCKhf0aRHo9cTl7Bh4VhZmd_3t8"></image>
+    </view>
+
+    <view class="individual-makerspace">
+      <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/23ae5bdfcd3dc7491ca4/makerspace_04.jpg"></image>
+      <h4>Trouble Maker</h4>
+      <text class="sub-text">Floor 7, Huaqiang Plaza Building</text>     
+    </view>
+</view>
