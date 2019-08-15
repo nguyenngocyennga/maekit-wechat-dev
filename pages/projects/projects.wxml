@@ -1,16 +1,16 @@
 <view class="container">
   <view class="box-element">
-    <h3 style="padding-bottom: 10rpx;">Cool Makerspaces</h3>
+    <h3 style="padding-bottom: 10rpx;">Cool Projects</h3>
     <view class="view-2columns">
       <block 
-        wx:for="{{makerspaces}}"
-        wx:for-item="makerspace"
+        wx:for="{{projects}}"
+        wx:for-item="project"
         wx:key="index">
-        <view class="individual-makerspace" data-id="{{makerspace.id}}" bindtap="handleClick">
-          <image src="{{makerspace.photo_url}}"/>
-          <text class="sub-header">{{makerspace.location}}</text>
-          <h4>{{makerspace.name}}</h4>
-          <text class="sub-text">{{makerspace.address}}</text>
+        <view class="individual-makerspace" data-id="{{project.id}}" bindtap="handleClick">
+          <image src="{{project.photo_url}}"/>
+          <text class="sub-header">CHENGDU</text>
+          <h4>{{project.name}}</h4>
+          <text class="sub-text">{{project.description}}</text>
         </view>
       </block>      
     </view>

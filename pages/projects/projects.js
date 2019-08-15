@@ -1,5 +1,4 @@
-// pages/makerspaces/makerspaces.js
-
+// pages/projects/projects.js
 import apiClient from "../../utils/apiClient.js"
 
 Page({
@@ -14,14 +13,13 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-
   onLoad: function () {
     const page = this
     const options = {
       success: function (res) {
-        const makerspaces = res.data.makerspaces
+        const projects = res.data.projects
         page.setData({
-          makerspaces
+          projects
         })
       },
       fail: function (err) {
@@ -29,7 +27,7 @@ Page({
       }
     }
 
-    apiClient.getMakerspaces(options)
+    apiClient.getProjects(options)
   },
 
   /**
@@ -79,7 +77,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-
   },
   goToProjects: function () {
     wx.navigateTo({
@@ -99,6 +96,11 @@ Page({
   goToHome: function () {
     wx.navigateTo({
       url: '/pages/index/index',
+    })
+  },
+  handleClick: function () {
+    wx.navigateTo({
+      url: '/pages/project_details/project_details',
     })
   }
 })

@@ -1,7 +1,4 @@
-// pages/makerspaces/makerspaces.js
-
-import apiClient from "../../utils/apiClient.js"
-
+// pages/project_ingredients/project_ingredients.js
 Page({
 
   /**
@@ -14,22 +11,8 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
+  onLoad: function (options) {
 
-  onLoad: function () {
-    const page = this
-    const options = {
-      success: function (res) {
-        const makerspaces = res.data.makerspaces
-        page.setData({
-          makerspaces
-        })
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    }
-
-    apiClient.getMakerspaces(options)
   },
 
   /**
@@ -78,7 +61,6 @@ Page({
    * Called when user click on the top right corner to share
    */
   onShareAppMessage: function () {
-
 
   },
   goToProjects: function () {

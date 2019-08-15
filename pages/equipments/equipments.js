@@ -1,5 +1,4 @@
-// pages/makerspaces/makerspaces.js
-
+// pages/equipments/equipments.js
 import apiClient from "../../utils/apiClient.js"
 
 Page({
@@ -14,14 +13,13 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-
   onLoad: function () {
     const page = this
     const options = {
       success: function (res) {
-        const makerspaces = res.data.makerspaces
+        const equipments = res.data.equipments
         page.setData({
-          makerspaces
+          equipments
         })
       },
       fail: function (err) {
@@ -29,7 +27,7 @@ Page({
       }
     }
 
-    apiClient.getMakerspaces(options)
+    apiClient.getEquipments(options)
   },
 
   /**
@@ -78,7 +76,6 @@ Page({
    * Called when user click on the top right corner to share
    */
   onShareAppMessage: function () {
-
 
   },
   goToProjects: function () {
