@@ -1,7 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/makerspaces/makerspaces",
+    "pages/equipments/equipments",
+    "pages/projects/projects",
+    "pages/project_ingredients/project_ingredients",
+    "pages/project_details/project_details"
   ],
   "window": {
     "backgroundTextStyle": "light",
