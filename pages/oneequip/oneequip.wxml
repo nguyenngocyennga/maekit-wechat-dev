@@ -1,20 +1,14 @@
-<view class="container">
+<!--pages/oneequip/oneequip.wxml-->
+<view class="individual-equip">
+    <image class="pic" src="{{equipments[id].photo_url}}" style="width: 100%"/>
+</view>
+<view class="blue-container">
   <view class="box-element">
-    <h3 style="padding-bottom: 10rpx;">Cool Equipments</h3>
-    <view class="view-2columns">
-      <block 
-        wx:for="{{equipments}}"
-        wx:for-item="equipment"
-        wx:key="index">
-        <view class="individual-makerspace" data-id="{{equipment.id}}" bindtap="handleClick">
-          <image src="{{equipment.photo_url}}"/>
-          <text class="sub-header"></text>
-          <h4>{{equipment.name}}</h4>
-        </view>
-      </block>      
-    </view>
+      <view><h3>{{equipments[id].name}}</h3></view>
+      <h4>{{equipments[id].description}}</h4>
   </view>
 </view>
+
 
 <view class="footer">
   <view class="footer-links">
@@ -36,4 +30,3 @@
     </view>
   </view>
 </view>
-

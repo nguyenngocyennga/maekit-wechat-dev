@@ -1,7 +1,5 @@
 <!--pages/prototypes-details/prototypes-details.wxml-->
 <!-- <text>pages/prototypes-details/prototypes-details.wxml</text> -->
-<view class="header-arrow" bindtap="goToProject"><image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/d6c0d7c59e8bfba4eefb/Left%20Logo.png"/>
-  </view>
 
 <view class="container">
 

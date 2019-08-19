@@ -1,6 +1,6 @@
 // pages/equipments/equipments.js
 import apiClient from "../../utils/apiClient.js"
-
+const app = getApp()
 Page({
 
   /**
@@ -18,6 +18,7 @@ Page({
     const options = {
       success: function (res) {
         const equipments = res.data.equipments
+        app.globalData.equipments = equipments
         page.setData({
           equipments
         })
@@ -84,18 +85,25 @@ Page({
     })
   },
   goToEquipments: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/equipments/equipments',
     })
   },
   goToFind: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/makerspaces/makerspaces',
     })
   },
   goToHome: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/index/index',
+    })
+  },
+  handleClick: function (e) {
+    // console.log(e)
+    let equip_id = e.currentTarget.dataset.id
+    wx.reLaunch({
+      url: `/pages/oneequip/oneequip?id=${equip_id}`
     })
   }
 })

@@ -1,4 +1,5 @@
-// pages/project_ingredients/project_ingredients.js
+// pages/onespace/onespace.js
+const app = getApp();
 Page({
 
   /**
@@ -12,12 +13,39 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    let page = this;
+    let makerspace_id = options.id-1;
+      // console.log(app.globalData);
+      // console.log(makerspace_id);
+    page.setData({
+      id: makerspace_id,
+      makerspaces:app.globalData.makerspaces
+    })
   },
 
   /**
    * Lifecycle function--Called when page is initially rendered
    */
+  goToProjects: function () {
+    wx.reLaunch({
+      url: '/pages/projects/projects',
+    })
+  },
+  goToEquipments: function () {
+    wx.reLaunch({
+      url: '/pages/equipments/equipments',
+    })
+  },
+  goToFind: function () {
+    wx.reLaunch({
+      url: '/pages/makerspaces/makerspaces',
+    })
+  },
+  goToHome: function () {
+    wx.reLaunch({
+      url: '/pages/index/index',
+    })
+  },
   onReady: function () {
 
   },
@@ -62,25 +90,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  goToProjects: function () {
-    wx.reLaunch({
-      url: '/pages/projects/projects',
-    })
-  },
-  goToEquipments: function () {
-    wx.reLaunch({
-      url: '/pages/equipments/equipments',
-    })
-  },
-  goToFind: function () {
-    wx.reLaunch({
-      url: '/pages/makerspaces/makerspaces',
-    })
-  },
-  goToHome: function () {
-    wx.reLaunch({
-      url: '/pages/index/index',
-    })
   }
 })

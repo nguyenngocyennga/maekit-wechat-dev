@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<!--index.wxml-->
 
 <view class="banner" style="background-image: url('https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/13314edfad268fc7c47b/banner.png');">
 </view>
@@ -56,6 +57,18 @@
     </view>
   </view>
 
+<view class="box-projects">
+<h3 style="padding-bottom: 10rpx;">Projects</h3>
+<swiper indicator-dots="{{indicatorDots}}"
+autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+<block wx:for="{{imgUrls}}">
+<swiper-item>
+<image src="{{item}}" class="slide-image" width="355" height="200"/>
+</swiper-item>
+</block>
+</swiper>
+</view>
+
   <view class="box-element">
     <h3 style="padding-bottom: 10rpx;">Makerspaces</h3>
     <view class="view-2columns">
@@ -72,20 +85,6 @@
         <text class="sub-header">SHENZHEN</text>
         <h4>Chai Huo X.factory </h4>
         <text class="sub-text">Dashierlu, Wankeyun Community, Nanshang Zone</text>
-      </view>
-
-      <view class="individual-makerspace">
-        <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/920984bbbc0e57d2af60/makerspace_03.jpg"/>
-        <text class="sub-header">SHANGHAI</text>
-        <h4>GAIA Space Center</h4>
-        <text class="sub-text">147-149 Area 3 168 Shangnan Lu</text>
-      </view>
-
-      <view class="individual-makerspace">
-        <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/23ae5bdfcd3dc7491ca4/makerspace_04.jpg"/>
-        <text class="sub-header">SHENZHEN</text>
-        <h4>Trouble Maker</h4>
-        <text class="sub-text">Floor 7, Huaqiang Plaza Building</text>
       </view>
     </view>
   </view>
@@ -111,4 +110,3 @@
     </view>
   </view>
 </view>
-

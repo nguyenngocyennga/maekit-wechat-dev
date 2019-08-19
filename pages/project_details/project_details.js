@@ -64,27 +64,27 @@ Page({
 
   },
   goToIngredient: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/project_ingredients/project_ingredients',
     })
   },
   goToProjects: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/projects/projects',
     })
   },
   goToEquipments: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/equipments/equipments',
     })
   },
   goToFind: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/makerspaces/makerspaces',
     })
   },
   goToHome: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/index/index',
     })
   }

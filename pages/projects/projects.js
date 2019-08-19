@@ -79,27 +79,27 @@ Page({
 
   },
   goToProjects: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/projects/projects',
     })
   },
   goToEquipments: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/equipments/equipments',
     })
   },
   goToFind: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/makerspaces/makerspaces',
     })
   },
   goToHome: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/index/index',
     })
   },
   handleClick: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/project_details/project_details',
     })
   }

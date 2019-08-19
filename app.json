@@ -5,6 +5,9 @@
     "pages/makerspaces/makerspaces",
     "pages/equipments/equipments",
     "pages/projects/projects",
+    "pages/maps/maps",
+    "pages/onespace/onespace",
+    "pages/oneequip/oneequip",
     "pages/project_ingredients/project_ingredients",
     "pages/project_details/project_details"
   ],
@@ -14,5 +17,11 @@
     "navigationBarTitleText": "Māk:it",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "A message to tell the user why you need permission"
+    }
+  }
+  
 }

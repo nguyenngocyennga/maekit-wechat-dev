@@ -1,20 +1,20 @@
-<view class="container">
-  <view class="box-element">
-    <h3 style="padding-bottom: 10rpx;">Cool Equipments</h3>
-    <view class="view-2columns">
-      <block 
-        wx:for="{{equipments}}"
-        wx:for-item="equipment"
-        wx:key="index">
-        <view class="individual-makerspace" data-id="{{equipment.id}}" bindtap="handleClick">
-          <image src="{{equipment.photo_url}}"/>
-          <text class="sub-header"></text>
-          <h4>{{equipment.name}}</h4>
-        </view>
-      </block>      
+<!--pages/onespace/onespace.wxml-->
+<view class="individual-makerspace">
+        <image class="pic" src="{{makerspaces[id].photo_url}}" style="width:100%"/>
     </view>
-  </view>
+<view class="blue-container">
+    <view class="box-element">
+        <view><h3>{{makerspaces[id].name}}</h3></view>
+        <view><h4>{{makerspaces[id].location}}</h4></view>
+        <view><sub-text>{{makerspaces[id].address}}</sub-text></view>
+      <view class="description"><h6>{{makerspaces[id].description}} </h6>
+    </view>
+    </view>
 </view>
+
+
+
+
 
 <view class="footer">
   <view class="footer-links">
@@ -36,4 +36,3 @@
     </view>
   </view>
 </view>
-
