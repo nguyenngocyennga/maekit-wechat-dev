@@ -7,7 +7,7 @@
 <view class="container">
   <view class="box-element">
     <h3>Māk:it</h3>
-    <text>Māk:it strives to promote the Maker Movement where people can gather to create, invent, and learn.</text>
+    <text>Māk:it strives to promote the Maker Movement where students can come together to create, invent, and learn.</text>
     <text>Cook up fun projects at your local makerspaces using scrap and craft materials, 3D printers, digital fabrication, electronics, and programming tools.
     </text>
   </view>
@@ -56,38 +56,7 @@
       </view>
     </view>
   </view>
-
-<view class="box-projects">
-<h3 style="padding-bottom: 10rpx;">Projects</h3>
-<swiper indicator-dots="{{indicatorDots}}"
-autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-<block wx:for="{{imgUrls}}">
-<swiper-item>
-<image src="{{item}}" class="slide-image" width="355" height="200"/>
-</swiper-item>
-</block>
-</swiper>
-</view>
-
-  <view class="box-element">
-    <h3 style="padding-bottom: 10rpx;">Makerspaces</h3>
-    <view class="view-2columns">
-
-      <view class="individual-makerspace">
-        <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/b58069dd630424950afa/makerspace_01.jpg"/>
-        <text class="sub-header">CHENGDU</text>
-        <h4>XMaker Innovation Center</h4>
-        <text class="sub-text">Tongzilin South 6, Fangcaodi, Block 7, Unit 1, 626</text>
-      </view>
-
-      <view class="individual-makerspace">
-        <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/26f8bd7a5a4d0fa6c8c6/makerspace_02.jpg"/>
-        <text class="sub-header">SHENZHEN</text>
-        <h4>Chai Huo X.factory </h4>
-        <text class="sub-text">Dashierlu, Wankeyun Community, Nanshang Zone</text>
-      </view>
-    </view>
-  </view>
+  
 </view>
 
 

@@ -34,10 +34,10 @@ h3 {
 }
 
 h4 {
-  color: #37474F;
+  color: #0fe0e7;
   font-weight: 500;
   font-size: 28rpx;
-  line-height: 40rpx;
+  line-height: 45rpx;
 }
 
 .view-2columns {
@@ -71,9 +71,9 @@ h4 {
 }
 
 .sub-text {
-  color: #37474F;
+  color: rgb(36, 47, 53);
   font-weight: 300;
-  font-size: 24rpx;
+  font-size: 26rpx;
   line-height: 40rpx;
 }
 
@@ -81,7 +81,6 @@ text {
   color: #37474F;
   font-weight: 300;
   font-size: 30rpx;
-  margin: 10rpx auto;
 }
 
 .icon {

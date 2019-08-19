@@ -65,7 +65,7 @@ h4 {
 
 .box-projects  image {
   object-fit: cover;
-  overflow: hidden
+  overflow: hidden;
   border-radius: 7rpx;
   width: 87vw;
   height: 30vh;
@@ -109,7 +109,7 @@ width: 70rpx;
 .tool-text {
   padding: 0;
   margin: 0 20rpx;
-  font-size: 30rpx;
+  font-size: 28rpx;
 }
 
 .box-element {

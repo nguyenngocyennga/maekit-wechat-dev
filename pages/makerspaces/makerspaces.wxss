@@ -1,37 +1,3 @@
-/* pages/makerspaces/makerspaces.wxss */
-.view-2columns{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 30px;
-  align-items: center
-}
-input{
-  background-color: #FFFFFF;
-  border: 1rpx solid #37474F;
-  box-shadow: 3rpx 3rpx 3rpx rgba(53, 51, 51, 0.123);
-  padding:25rpx;
-  border-radius: 10rpx;
-  margin-top: 10rpx;
-  margin-bottom: 30rpx;
-}
-input:hover {
-  border: 1rpx solid #66FFFF;
-}
-
-.button-full {
-  background-color: #66FFFF;
-  border-radius: 10rpx;
-  color: white;
-  font-weight: bold;
-  margin-top: 10rpx;
-  margin-bottom: 30rpx;
-  width:200rpx;
-}
-.map-box {
-  margin-top: 10rpx;
-  margin-bottom: 50rpx;
-  padding: 0 10rpx;
-}
 .container {
   padding-bottom: 115rpx;
 }
@@ -68,10 +34,10 @@ h3 {
 }
 
 h4 {
-  color: #37474F;
+  color: #0fe0e7;
   font-weight: 500;
   font-size: 28rpx;
-  line-height: 40rpx;
+  line-height: 45rpx;
 }
 
 .view-2columns {
@@ -85,7 +51,6 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: left;
-  height: 350rpx;
 }
 
 .individual-makerspace > image {
@@ -106,9 +71,9 @@ h4 {
 }
 
 .sub-text {
-  color: #37474F;
+  color: rgb(36, 47, 53);
   font-weight: 300;
-  font-size: 24rpx;
+  font-size: 26rpx;
   line-height: 40rpx;
 }
 
@@ -116,7 +81,6 @@ text {
   color: #37474F;
   font-weight: 300;
   font-size: 30rpx;
-  margin: 10rpx auto;
 }
 
 .icon {
