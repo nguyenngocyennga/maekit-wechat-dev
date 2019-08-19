@@ -85,6 +85,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: left;
+  height: 350rpx;
 }
 
 .individual-makerspace > image {

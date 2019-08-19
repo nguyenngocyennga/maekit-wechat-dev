@@ -1,21 +1,22 @@
-.container {
-  padding-bottom: 115rpx;
-}
+/* pages/onespace/onespace.wxss */
+/* pages/makerspaces/makerspaces.wxss */
 
-.banner {
-  height: 410rpx ;
-  background-size: cover;
-  background-position: center;
-  padding: 16rpx;
+.blue-container {
+  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  text-align: center;
-  position: relative;
-}
+  padding: 10rpx;
+  background-color: rgba(51, 252, 255, 0.219);
+} 
 
-h2 {
+/* .view-2columns{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+  align-items: center
+} */
+
+/* h2 {
   font-family: 'Gill Sans MT';
   font-weight: bold;
   font-size: 44rpx;
@@ -24,12 +25,13 @@ h2 {
   left: 50rpx;
   bottom: 50rpx;
   text-align: left;
-}
+} */
 
 h3 {
   font-family: 'Gill Sans MT';
   font-weight: 900;
   font-size: 33rpx;
+  line-height: 100rpx;
   color: #37474F;
 }
 
@@ -37,43 +39,21 @@ h4 {
   color: #37474F;
   font-weight: 500;
   font-size: 28rpx;
-  line-height: 40rpx;
+  line-height: 50rpx;
 }
 
-.view-2columns {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 30rpx;
-  padding: 10rpx 0;
+.box-element {
+  padding: 50rpx;
+  
 }
-
-.individual-makerspace {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-
-.individual-makerspace > image {
+.pic {
   object-fit: cover;
   overflow: hidden;
   border-radius: 7rpx;
-  width: 42vw;
-  height: 18vh;
-  margin-bottom: 10rpx;
+  height: 40vh;
 }
 
-
-.box-projects  image {
-  object-fit: cover;
-  overflow: hidden
-  border-radius: 7rpx;
-  width: 87vw;
-  height: 30vh;
-  margin-bottom: 10rpx;
-  align-items:center;
-}
-
-.sub-header {
+h6 {
   color: #37474F;
   font-weight: 300;
   font-size: 22rpx;
@@ -83,17 +63,18 @@ h4 {
 
 .sub-text {
   color: #37474F;
-  font-weight: 300;
-  font-size: 24rpx;
-  line-height: 40rpx;
+  font-weight: 200;
+  font-size: 20rpx;
+  line-height: 30rpx;
 }
 
-text {
+
+/* text {
   color: #37474F;
-  font-weight: 300;
-  font-size: 30rpx;
+  font-weight: 400;
+  font-size: 40rpx;
   margin: 10rpx auto;
-}
+} */
 
 .icon {
 height: 70rpx;
@@ -112,11 +93,7 @@ width: 70rpx;
   font-size: 30rpx;
 }
 
-.box-element {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30rpx;
-}
+
 
 .footer-links {
   display: grid;

@@ -29,12 +29,12 @@ h2 {
 h3 {
   font-family: 'Gill Sans MT';
   font-weight: 900;
-  font-size: 33rpx;
-  color: #37474F;
+  font-size: 43rpx;
+  color: #23B8FF;
 }
 
 h4 {
-  color: #37474F;
+  color: #ff6176;
   font-weight: 500;
   font-size: 28rpx;
   line-height: 40rpx;
@@ -47,64 +47,33 @@ h4 {
   padding: 10rpx 0;
 }
 
-.individual-makerspace {
+.individual-prototypes {
   display: flex;
   flex-direction: column;
   align-items: left;
+  margin-bottom: 40rpx;
+  margin-top: 20rpx;
 }
 
-.individual-makerspace > image {
+.individual-prototypes > image {
   object-fit: cover;
   overflow: hidden;
   border-radius: 7rpx;
-  width: 42vw;
-  height: 18vh;
-  margin-bottom: 10rpx;
-}
-
-.sub-header {
-  color: #37474F;
-  font-weight: 300;
-  font-size: 22rpx;
-  line-height: 30rpx;
-  margin: 0;
-}
-
-.sub-text {
-  color: #37474F;
-  font-weight: 300;
-  font-size: 24rpx;
-  line-height: 40rpx;
+  width: 60vw;
+  height: 25vh;
+  margin-top: 20rpx;
 }
 
 text {
   color: #37474F;
   font-weight: 300;
-  font-size: 30rpx;
-  margin: 10rpx auto;
+  font-size: 27rpx;
+  margin-top: 0rpx;
 }
-
+.
 .icon {
 height: 70rpx;
 width: 70rpx;
-}
-
-.tool-icon {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.tool-text {
-  padding: 0;
-  margin: 0 20rpx;
-  font-size: 30rpx;
-}
-
-.box-element {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30rpx;
 }
 
 .footer-links {
@@ -139,4 +108,15 @@ width: 70rpx;
   font-size: 20rpx;
   line-height: 25rpx;
   align-content: center;
+}
+
+.description {
+  color: #23B8FF;
+  font-weight: 600;
+  font-size: 30rpx;
+}
+
+.view {
+  padding-top: 0rpx;
+  margin-top: 0rpx;
 }

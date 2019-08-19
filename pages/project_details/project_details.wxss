@@ -26,7 +26,7 @@ input:hover {
 }
 
 .button-full {
-  background-color: #20E5CE;
+  background-color: #00ffff;
   border-radius: 10rpx;
   color: white;
   font-weight: bold;
@@ -41,7 +41,7 @@ input:hover {
   margin-top: 30rpx;
   margin-bottom: 30rpx;
   border-radius: 10rpx;
-  color: #20E6CE;
+  color:#99ffff;
 }
 
 button::after {

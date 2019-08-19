@@ -1,6 +1,7 @@
 // pages/makerspaces/makerspaces.js
 
 import apiClient from "../../utils/apiClient.js"
+const app=getApp()
 
 Page({
 
@@ -19,11 +20,14 @@ Page({
     const page = this
     const options = {
       success: function (res) {
-        const makerspaces = res.data.makerspaces
+        const makerspaces = res.data.makerspaces;
+
+        app.globalData.makerspaces=makerspaces
         page.setData({
           makerspaces
         })
       },
+
       fail: function (err) {
         console.log(err)
       }
@@ -82,23 +86,30 @@ Page({
 
   },
   goToProjects: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/projects/projects',
     })
   },
   goToEquipments: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/equipments/equipments',
     })
   },
   goToFind: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/makerspaces/makerspaces',
     })
   },
   goToHome: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/index/index',
+    })
+  },
+  handleClick: function (e) {
+    // console.log(e)
+    let makerspace_id=e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/onespace/onespace?id=${makerspace_id}`,
     })
   }
 })

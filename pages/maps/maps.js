@@ -1,4 +1,4 @@
-// pages/project_ingredients/project_ingredients.js
+// pages/maps/maps.js
 Page({
 
   /**
@@ -12,9 +12,23 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    let that = this
+    wx.authorize({
+      scope: 'scope.userLocation',
+      success(res) {
+        console.log(res)
+        wx.chooseLocation({
+          success: function (res) {
+            console.log(res)
+          }
+        })
+      },
+      fail(err) {
+        console.log(err)
+      }
+    })
   },
-
+  
   /**
    * Lifecycle function--Called when page is initially rendered
    */
@@ -62,25 +76,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  goToProjects: function () {
-    wx.reLaunch({
-      url: '/pages/projects/projects',
-    })
-  },
-  goToEquipments: function () {
-    wx.reLaunch({
-      url: '/pages/equipments/equipments',
-    })
-  },
-  goToFind: function () {
-    wx.reLaunch({
-      url: '/pages/makerspaces/makerspaces',
-    })
-  },
-  goToHome: function () {
-    wx.reLaunch({
-      url: '/pages/index/index',
-    })
   }
 })

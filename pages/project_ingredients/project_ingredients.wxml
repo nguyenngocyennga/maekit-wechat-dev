@@ -3,16 +3,12 @@
 <view class="container">
 
 <view class="box-element">
-    <view class="view-2columns">
-
-      <view class="individual-prototypes">
+         
         <h3>Ingredients</h3>
-      </view>
 
        <view class="individual-prototypes">
         <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/93edb7e6604b91e21d46/LED%20Ring.png"/>
        </view>
-    </view>
   </view>
 
 
@@ -20,7 +16,7 @@
 
   <view class="individual-prototypes">
     <h4>Materials</h4>
-    <view><text class="description">
+    <view class="individual-prototypes"><text>
     LED 3mm (1)
     Wrapping Wire, Coated, 30G, ( about 3 feet)
     Epoxy Resin
@@ -30,7 +26,7 @@
 
   <view class="individual-prototypes">
     <h4>Tools</h4>
-    <view><text class="description">
+    <view><text>
     Soldering Iron/solder
     Wireless charger, Chi pad or phone with and NFC reader for testing the LED ring
     </text></view>
@@ -38,7 +34,7 @@
 
   <view class="individual-prototypes">
     <view><text class="description">
-    Please contact Maker Space directly to purchase the project Ingredients:
+    Please contact Maker Space directly to purchase the project Ingredients.
     </text></view>
   </view>
 </view>
@@ -63,3 +59,4 @@
     </view>
   </view>
 </view>
+
