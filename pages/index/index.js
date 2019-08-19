@@ -4,51 +4,66 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    imgUrls: ['https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/94230d1687cf1d580095/LED%20Ring%20-%20Rev%204.png',
+      'https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/ff3518aa76030a750804/Wired%20up%20Stationery%20-%20Rev%201.jpg', 'https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/4b5556795d8c3215f15e/Sew%20LED%20Torch%20Rev%202.png'
+    ],
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  changeIndicatorDots: function (e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
     })
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+  changeAutoplay: function (e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
   },
-  getUserInfo: function(e) {
+  intervalChange: function (e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange: function (e) {
+    this.setData({
+      duration: e.detail.value
+    })
+  },
+
+
+  onLoad: function () {
+
+  },
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  goToProjects: function () {
+    wx.reLaunch({
+      url: '/pages/projects/projects',
+    })
+  },
+  goToEquipments: function () {
+    wx.reLaunch({
+      url: '/pages/equipments/equipments',
+    })
+  },
+  goToFind: function () {
+    wx.reLaunch({
+      url: '/pages/makerspaces/makerspaces',
+    })
+  },
+  goToHome: function () {
+    wx.reLaunch({
+      url: '/pages/index/index',
+    })
   }
 })
+  

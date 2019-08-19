@@ -1,3 +1,37 @@
+/* pages/makerspaces/makerspaces.wxss */
+.view-2columns{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+  align-items: center
+}
+input{
+  background-color: #FFFFFF;
+  border: 1rpx solid #37474F;
+  box-shadow: 3rpx 3rpx 3rpx rgba(53, 51, 51, 0.123);
+  padding:25rpx;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+}
+input:hover {
+  border: 1rpx solid #66FFFF;
+}
+
+.button-full {
+  background-color: #66FFFF;
+  border-radius: 10rpx;
+  color: white;
+  font-weight: bold;
+  margin-top: 10rpx;
+  margin-bottom: 30rpx;
+  width:200rpx;
+}
+.map-box {
+  margin-top: 10rpx;
+  margin-bottom: 50rpx;
+  padding: 0 10rpx;
+}
 .container {
   padding-bottom: 115rpx;
 }
@@ -51,6 +85,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: left;
+  height: 350rpx;
 }
 
 .individual-makerspace > image {
@@ -60,17 +95,6 @@ h4 {
   width: 42vw;
   height: 18vh;
   margin-bottom: 10rpx;
-}
-
-
-.box-projects  image {
-  object-fit: cover;
-  overflow: hidden
-  border-radius: 7rpx;
-  width: 87vw;
-  height: 30vh;
-  margin-bottom: 10rpx;
-  align-items:center;
 }
 
 .sub-header {

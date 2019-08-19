@@ -1,0 +1,94 @@
+<!--pages/prototypes-details/prototypes-details.wxml-->
+<!-- <text>pages/prototypes-details/prototypes-details.wxml</text> -->
+
+<view class="container">
+
+  <h3>Project Description</h3>
+  <text class="sub-header">ARTS & CRAFTS</text>
+    <h4>Make a Secret Light Up Ring</h4>
+
+  <view class="individual-prototypes">
+    <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/2f0c6a6aca5ebd94a81b/Light%20Up%20Ring.png"/>
+  </view>
+    <h4>Project Brief</h4>
+    <view><text class="description">
+    This ring contains and LED connected to a wire coil. When the wire coil is properly aligned with       an electromagnetic field, the LED will light up. This phenomenon is called induction. The              electric current in a primary coil contained in a NFC reader or wireless charger creates a             magnetic field which, in turn, creates an electric current in the coil cast inside the ring,           lighting up the LED. This is the same technology that allows you to tap your card to board public      transportation, or tap to pay. Make this ring and take it around town to discover how                  electromagnetic fields at work!
+
+    Note that the gauge of your wire, the circumference of the ring, and the color of LED, and whether    your wire is coated will affect how many wraps you need to power the LED. With the recommended wire    and a size 11 ring mold, 15 wraps will comfortably fit in the ring mold, and produce a bright LED.     Also know that different charging devices (the primary coil) will give you different amounts of        power, so the ring might not work with every charger the same way. Generally, the more wraps, the      brighter your LED. If your LED does not seem to be working, try again with a increased number of       wraps. I would do no less than 15. If you want to play it safe, go for the maximum number of wraps,    with the lower power LED like yellow or red.    
+    </text></view>
+
+    <view class="individual-prototypes">
+    <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/c95a969ec067ef989ac5/LED%20Ring%20Step%201.png"/>
+  </view>
+    <h4>1st Step</h4>
+    <view><text class="description">
+    First, make your coil.Wrap the wire in a circle 15 -30 times making sure that it will that will fit in the mold. Tuck the wire into your mold to keep it from unraveling.
+    </text></view>
+
+    <view class="individual-prototypes">
+    <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/87d4869e7c913864ce98/LED%20Ring%20Step%202.png"/>
+  </view>
+    <h4>2nd Step</h4>
+    <view><text class="description">
+    Trim your LED legs so they comfortably fit in the mold, and solder one LED leg to one free end of       the wire, and repeat with ends.
+    </text></view>
+    
+    <view class="individual-prototypes">
+    <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/e46073f3d5438b1dae2c/LED%20Ring%20Step%203.png"/>
+  </view>
+    <h4>3rd Step</h4>
+    <view><text class="description">
+    Now is a good time to test your LED to make sure everything is working as expected. Test using a       Adafruit chi pad, or any wireless charging pad, or a phone with NFC. These all contain a primary       induction coil. Hold the coil and LED assembly over the charger (primary coil). The LED should         light up. The LED requires that current flow in a specific direction (it has a polarity) , so if       the LED does not light up, flip it over to reverse the polarity and align it with the primary coil.
+    </text></view>
+
+    <view class="individual-prototypes">
+    <image  src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/ece1c41a7d951b782018/LED%20Ring%20Step%204.png"/>
+  </view>
+    <h4>4th Step</h4>
+    <view><text class="description">
+    Prepare your resin according to the included instructions. This is the time to add glitter or   color into your resin. Pour resin into your mold, making sure to get around the wires and tapping gently as needed so there are no air bubbles in the cast.
+    </text></view>
+
+    <view class="individual-prototypes">
+    <image  src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/87942b19648f84ad3a8f/LED%20Ring%20Step%205.png"/>
+  </view>
+    <h4>5th Step</h4>
+    <view><text class="description">
+    Let your resin cure as directed. Once fully cured, clean up with sandpaper.
+    </text></view>
+
+        <view class="individual-prototypes">
+    <image  src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/27b02aa1de42f54e3eb2/LED%20Ring%20Step%206.png"/>
+  </view>
+    <h4>6th Step</h4>
+    <view><text class="description">
+    Check out your ring!
+    </text></view>
+
+  <view>
+      <button class="button-full" bindtap="goToIngredient">Click Here for Ingredient</button>
+    </view>
+
+</view>
+
+
+<view class="footer">
+  <view class="footer-links">
+    <view class="footer-icon" bindtap="goToHome">
+      <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/50ae98e646791bfe087d/Home%20Logo.png"/>
+      <view><text class="icon-text">Home</text></view>
+    </view>
+    <view class="footer-icon" bindtap="goToProjects">
+      <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/0737889d887fa9e7f3c6/Prototype.png"/>
+      <view><text class="icon-text">Projects</text></view>
+    </view>
+    <view class="footer-icon" bindtap="goToEquipments">
+      <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/4655f22c65a384820d79/equipment.png"/>
+      <view><text class="icon-text">Equipments</text></view>
+    </view>
+    <view class="footer-icon" bindtap="goToFind">
+      <image src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/64a90a42c416ccae2fbf/Address%20Logo.png"/>
+      <view><text class="icon-text">Find</text></view>
+    </view>
+  </view>
+</view>
