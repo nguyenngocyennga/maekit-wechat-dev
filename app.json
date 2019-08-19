@@ -17,6 +17,35 @@
     "navigationBarTitleText": "Māk:it",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Home",
+        "iconPath": "images/icons/home_logo.png",
+        "selectedIconPath": "images/icons/home_logo_color.png"
+
+      },
+      {
+        "pagePath": "pages/equipments/equipments",
+        "text": "Equipment",
+        "iconPath": "images/icons/equipment_logo.png",
+        "selectedIconPath": "images/icons/equipment_logo_color.png"
+      },
+      {
+        "pagePath": "pages/projects/projects",
+        "text": "Project",
+        "iconPath": "images/icons/prototype_logo.png",
+        "selectedIconPath": "images/icons/prototype_logo_color.png"
+      },
+      {
+        "pagePath": "pages/makerspaces/makerspaces",
+        "text": "Find",
+        "iconPath": "images/icons/address_logo.png",
+        "selectedIconPath": "images/icons/address_logo_color.png"
+      }
+    ]
+  },
   "sitemapLocation": "sitemap.json",
   "permission": {
     "scope.userLocation": {
