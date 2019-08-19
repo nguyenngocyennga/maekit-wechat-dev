@@ -1,7 +1,3 @@
 {
-  "permission": {
-    "scope.userLocation": {
-      "desc": "A message to tell the user why you need permission"
-    }
-  }
+  "usingComponents": {}
 }
