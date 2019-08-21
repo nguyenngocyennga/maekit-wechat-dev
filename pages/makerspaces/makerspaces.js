@@ -1,7 +1,7 @@
 // pages/makerspaces/makerspaces.js
 
 import apiClient from "../../utils/apiClient.js"
-const app=getApp()
+const app = getApp()
 
 Page({
 
@@ -22,7 +22,7 @@ Page({
       success: function (res) {
         const makerspaces = res.data.makerspaces;
 
-        app.globalData.makerspaces=makerspaces
+        app.globalData.makerspaces = makerspaces
         page.setData({
           makerspaces
         })
@@ -106,10 +106,9 @@ Page({
     })
   },
   handleClick: function (e) {
-    // console.log(e)
     let makerspace_id=e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `/pages/onespace/onespace?id=${makerspace_id}`,
+      url: `/pages/one_space/one_space?id=${makerspace_id}`,
     })
   }
 })

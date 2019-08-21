@@ -1,0 +1,62 @@
+<!--pages/bookings/bookings.wxml-->
+<view class="container">
+
+  <view class="box-container">   
+    <h3>Pick Your Preffered MakerSpace</h3>
+    <view class="map-box">
+      <map longitude="{{longitude}}" latitude="{{latitude}}" scale="{{sc}}" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
+    </view>
+  </view>
+
+  <view class="box-container">
+    <h4>* Required</h4>
+
+    <h3>Project Name</h3>
+    <input type="text" bindinput="handleChange" data-name="projectName" placeholder="LED Ring"/>
+
+    <h3>Contact Name</h3>
+    <input type="text" bindinput="handleChange" data-name="contactName" placeholder="Simon Chee"/>
+
+    <h3>Email</h3>
+    <input type="text" bindinput="handleChange" data-name="email" placeholder="SimonChee@makit.com"/>
+
+    <h3>Phone Number</h3>
+    <input type="text" bindinput="handleChange" data-name="phoneNumber" placeholder="135 1890 8678"/>
+
+    <h3>Number of Students</h3>
+    <input type="number" bindinput="handleChange" data-name="numberStudents" placeholder="12 cool kids"/>
+
+    <h3>Preferred MakerSpace</h3>
+    <input type="text" bindinput="handleChange" data-name="makerspace" placeholder="MakerSpace"/>
+
+    <h3>Preferred Date Range</h3>
+    <view class="view-2columns">
+      <view>
+          <text>From</text>
+          <picker mode="date" value="{{dateArrival}}" start="2019-06-01" end="2020-09-01"
+            bindchange="bindDateArrivalChange">
+            <button class="date-input">{{dateArrival}}</button>
+          </picker>
+      </view>
+    
+      <view>
+        <text>To</text>
+          <picker mode="date" value="{{dateDeparture}}" start="2019-06-01" end="2020-09-01"
+            bindchange="bindDateDepartureChange">
+              <button class="date-input">{{dateDeparture}}</button>
+          </picker>
+      </view>
+    </view>
+
+    <h3>About My Kids</h3>
+    <textarea bindinput="handleChange" data-name="aboutKids" placeholder="Describe your cool kids to customize the workshop ☺️ " style="height:100px"></textarea>
+
+    <h3>Other Message</h3>
+    <textarea bindinput="handleChange" data-name="otherMessage" placeholder="Other notes or questions" style="height:100px"></textarea>
+  </view>
+
+  <view>
+    <button class="button-full" bindtap="goToConfirm">Send request</button>
+  </view>
+
+</view> 

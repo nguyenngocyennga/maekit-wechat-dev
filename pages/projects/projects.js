@@ -1,5 +1,6 @@
 // pages/projects/projects.js
 import apiClient from "../../utils/apiClient.js"
+const app = getApp()
 
 Page({
 
@@ -18,6 +19,7 @@ Page({
     const options = {
       success: function (res) {
         const projects = res.data.projects
+        app.globalData.projects = projects
         page.setData({
           projects
         })
@@ -98,9 +100,10 @@ Page({
       url: '/pages/index/index',
     })
   },
-  handleClick: function () {
-    wx.reLaunch({
-      url: '/pages/project_details/project_details',
+  handleClick: function (e) {
+    let project_id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/one_project/one_project?id=${project_id}`,
     })
   }
 })

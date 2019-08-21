@@ -7,7 +7,7 @@
         wx:for-item="makerspace"
         wx:key="index">
         <view class="individual-makerspace" data-id="{{makerspace.id}}" bindtap="handleClick">
-          <image src="{{makerspace.photo_url}}"/>
+          <image mode="aspectFill" src="{{makerspace.photo_url}}"/>
           <text class="sub-header">{{makerspace.location}}</text>
           <h4>{{makerspace.name}}</h4>
           <text class="sub-text">{{makerspace.address}}</text>

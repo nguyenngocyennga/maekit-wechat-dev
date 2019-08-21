@@ -1,6 +1,5 @@
-// pages/equipments/equipments.js
-import apiClient from "../../utils/apiClient.js"
-const app = getApp()
+// pages/one_project/one_project.js
+const app = getApp();
 Page({
 
   /**
@@ -13,22 +12,23 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function () {
-    const page = this
-    const options = {
-      success: function (res) {
-        const equipments = res.data.equipments
-        app.globalData.equipments = equipments
-        page.setData({
-          equipments
-        })
-      },
-      fail: function (err) {
-        console.log(err)
-      }
-    }
+  onLoad: function (options) {
+    let page = this;
+    let project_id = options.id;
+    // console.log(options.id)
+    const project_array = app.globalData.projects
+    let oneproject = project_array.filter(project => {
+      // console.log(space.id)
+      // console.log(space.id == project_id)
+      // project_id is string while space.id is integer
+      return project.id == project_id;
+    })[0]
 
-    apiClient.getEquipments(options)
+    // console.log(oneproject)
+    page.setData({
+      id: project_id,
+      project: oneproject
+    })
   },
 
   /**
@@ -79,30 +79,14 @@ Page({
   onShareAppMessage: function () {
 
   },
-  goToProjects: function () {
+  goToBooking: function () {
     wx.navigateTo({
-      url: '/pages/projects/projects',
+      url: '/pages/bookings/bookings',
     })
   },
-  goToEquipments: function () {
-    wx.reLaunch({
-      url: '/pages/equipments/equipments',
-    })
-  },
-  goToFind: function () {
+  goToMakerspaces: function () {
     wx.reLaunch({
       url: '/pages/makerspaces/makerspaces',
-    })
-  },
-  goToHome: function () {
-    wx.reLaunch({
-      url: '/pages/index/index',
-    })
-  },
-  handleClick: function (e) {
-    let equip_id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/one_equip/one_equip?id=${equip_id}`,
     })
   }
 })

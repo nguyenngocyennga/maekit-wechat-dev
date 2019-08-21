@@ -1,0 +1,70 @@
+/* pages/bookings/bookings.wxss */
+
+h2 {
+  font-family: 'Gill Sans MT';
+  font-weight: bold;
+  font-size: 44rpx;
+  color: #FFFFFF;
+  position: absolute;
+  left: 50rpx;
+  bottom: 50rpx;
+  text-align: left;
+}
+
+h3 {
+  font-family: 'Gill Sans MT';
+  font-weight: 700;
+  font-size: 30rpx;
+  color: #37474F;
+}
+
+.box-container {
+  margin-top: 5rpx;
+  padding: 8rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.view-2columns {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 30rpx;
+  align-items: center;
+}
+
+.map-box {
+  border-radius: 5rpx;
+  margin-top: 20rpx;
+}
+
+input, textarea {
+  background: #FFFFFF;
+  border: 1rpx solid #E1E7ED;
+  /* box-shadow: 3rpx 3rpx 3rpx rgba(53, 51, 51, 0.123); */
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+}
+
+input::hover {
+  border: 1rpx solid  #0fe0e7;
+}
+
+.view-2columns {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 30rpx;
+  padding: 15rpx 0;
+}
+
+.date-input {
+  background: #FFFFFF;
+  border: 1rpx solid #E1E7ED;
+  box-shadow: 3rpx 3rpx 3rpx rgba(253, 70, 70, 0.123);
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 33rpx;
+  text-align: left;
+}

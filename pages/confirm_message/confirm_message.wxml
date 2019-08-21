@@ -1,0 +1,5 @@
+<modal title="Your request has been sent!" cancelText="Back" confirmText="Home" hidden="{{modalHidden1}}" bindconfirm="goToProjects" bindcancel="goToProjects">
+<text>A Guru from your preffered makerspace will get in touch with you soon. Thank you!</text>
+</modal>
+
+<image mode="aspectFill" class="background-image" src="../../images/demo-day.png"/>

@@ -1,0 +1,5 @@
+/* pages/confirm_message/confirm_message.wxss */
+.background-image {
+  width: 100vw;
+  height: 100vh;
+}

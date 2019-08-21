@@ -7,7 +7,7 @@
         wx:for-item="equipment"
         wx:key="index">
         <view class="individual-makerspace" data-id="{{equipment.id}}" bindtap="handleClick">
-          <image src="{{equipment.photo_url}}"/>
+          <image mode="aspectFill" src="{{equipment.photo_url}}"/>
           <h4>{{equipment.name}}</h4>
           <text class="sub-text">{{equipment.description}}</text>
         </view>

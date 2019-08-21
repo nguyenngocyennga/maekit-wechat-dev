@@ -1,0 +1,16 @@
+<view class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('{{makerspace.photo_url}}'); background-position: right">
+  <h2>{{makerspace.name}}</h2>
+</view>
+
+<view class="container">
+  <view class="box-element">
+        <h3>{{makerspace.location}}</h3>
+        <text>{{makerspace.address}}</text>
+        <h4>{{makerspace.phone_number}}</h4>
+        <text>{{makerspace.description}}</text>
+  </view>
+
+  <view>
+    <button class="button-full" bindtap="goToBooking">Request a workshop</button>
+  </view>
+</view>

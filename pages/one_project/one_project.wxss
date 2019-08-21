@@ -1,0 +1,35 @@
+/* pages/one_project/one_project.wxss */
+h2 {
+  text-shadow: 3rpx 3rpx #2727277c;
+}
+
+h3 {
+  color: #0fe0e7;
+  margin: 10rpx 0;
+  font-size: 35rpx;
+}
+
+text {
+  font-size: 29rpx;
+}
+
+.step-image {
+  border-radius: 5rpx;
+  margin-bottom: 15rpx;
+  width: 100%;
+}
+
+.project-steps {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.step-box {
+  display: flex;
+  flex-direction: column;
+  border: 1rpx dashed #0fe0e7;
+  border-radius: 5rpx;
+  padding: 30rpx;
+  margin: 15rpx 0;
+}
+
