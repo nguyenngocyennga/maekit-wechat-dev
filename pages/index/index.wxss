@@ -1,7 +1,3 @@
-.container {
-  padding-bottom: 115rpx;
-}
-
 .banner {
   height: 410rpx ;
   background-size: cover;

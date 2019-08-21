@@ -1,2 +1,16 @@
-<!--pages/one_equip/one_equip.wxml-->
-<text>pages/one_equip/one_equip.wxml</text>
+<view class="banner" 
+style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('{{equip.photo_url}}'); background-position: right">
+  <h2>{{equip.name}}</h2>
+</view>
+
+<view class="container">
+  <view class="box-element">
+    <h3>Basic Use</h3>
+    <text>{{equip.description}}</text>
+  </view>
+  <view class="box-element">
+    <h3>Video Tutorial</h3>
+    <video src="{{equip.video_url}}"></video>
+    <text>Source: {{equip.author}}</text>
+  </view>
+</view>

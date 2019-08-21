@@ -61,10 +61,15 @@ input::hover {
 .date-input {
   background: #FFFFFF;
   border: 1rpx solid #E1E7ED;
-  box-shadow: 3rpx 3rpx 3rpx rgba(253, 70, 70, 0.123);
+  /* box-shadow: 3rpx 3rpx 3rpx rgba(253, 70, 70, 0.123); */
   border-radius: 10rpx;
   margin-top: 30rpx;
   margin-bottom: 30rpx;
   font-size: 33rpx;
   text-align: left;
+}
+
+.input-placeholder {
+  font-size: 30rpx;
+  color: rgba(180, 180, 180, 0.822);
 }

@@ -80,6 +80,7 @@ Page({
 
   },
   goToBooking: function () {
+    
     wx.navigateTo({
       url: '/pages/bookings/bookings',
     })

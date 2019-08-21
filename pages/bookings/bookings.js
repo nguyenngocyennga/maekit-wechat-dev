@@ -7,8 +7,8 @@ Page({
   data: {
     // lt: "30.65984",
     // lg: "104.10194", //"makerspace.longitude",// wait to database
-    dateArrival: '2019-08-09',
-    dateDeparture: '2019-08-09',
+    dateArrival: new Date(),
+    dateDeparture: new Date(),
     sc: '11',
     mk: [
       {
@@ -100,6 +100,7 @@ Page({
    */
   onLoad: function (options) {
     const that = this
+    console.log(Date(Date.now()).toString())
     wx.getLocation({
       type: 'GCJ-02',
       success: function (res) {
@@ -146,6 +147,8 @@ Page({
     const makerspace = page.data.makerspace
     const about_kids = page.data.aboutKids
     const other_message = page.data.otherMessage
+    const from_date = page.data.dateArrival
+    const to_date = page.data.dateDeparture
     const newBooking = {
       project,
       name,
@@ -154,7 +157,9 @@ Page({
       number_students,
       makerspace,
       about_kids,
-      other_message
+      other_message,
+      from_date,
+      to_date
     }
 
     wx.request({

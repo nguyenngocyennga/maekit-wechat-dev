@@ -27,6 +27,6 @@ style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('
     <h3>Request a workshop</h3>
     <text>If you find this project exciting, let's arrange a workshop for your cool kids!</text>
   <view>
-    <button class="button-full" bindtap="goToMakerspaces">Explore Makerspaces</button>
+    <button class="button-full" bindtap="goToBooking">Request a workshop</button>
   </view>
 </view>

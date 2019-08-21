@@ -1,4 +1,6 @@
 // pages/one_equip/one_equip.js
+const app = getApp();
+
 Page({
 
   /**
@@ -12,7 +14,17 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    let page = this;
+    let equip_id = options.id;
+    const equip_array = app.globalData.equipments
+    let oneequip = equip_array.filter(equip => {
+      return equip.id == equip_id;
+    })[0]
 
+    page.setData({
+      id: equip_id,
+      equip: oneequip
+    })
   },
 
   /**

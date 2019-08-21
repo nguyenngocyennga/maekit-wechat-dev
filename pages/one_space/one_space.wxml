@@ -9,8 +9,4 @@
         <h4>{{makerspace.phone_number}}</h4>
         <text>{{makerspace.description}}</text>
   </view>
-
-  <view>
-    <button class="button-full" bindtap="goToBooking">Request a workshop</button>
-  </view>
 </view>

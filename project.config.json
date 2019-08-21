@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 13,
+			"current": 14,
 			"list": [
 				{
 					"id": -1,
@@ -145,6 +145,13 @@
 					"id": -1,
 					"name": "pages/confirm_message/confirm_message",
 					"pathName": "pages/confirm_message/confirm_message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/one_equip/one_equip",
+					"pathName": "pages/one_equip/one_equip",
 					"scene": null
 				}
 			]
