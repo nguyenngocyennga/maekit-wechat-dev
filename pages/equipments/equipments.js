@@ -103,7 +103,7 @@ Page({
     // console.log(e)
     let equip_id = e.currentTarget.dataset.id
     wx.reLaunch({
-      url: `/pages/oneequip/oneequip?id=${equip_id}`
+      url: `/pages/onequip/onequip?id=${equip_id}`
     })
   }
 })

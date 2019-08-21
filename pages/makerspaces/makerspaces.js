@@ -21,8 +21,7 @@ Page({
     const options = {
       success: function (res) {
         const makerspaces = res.data.makerspaces;
-
-        app.globalData.makerspaces=makerspaces
+        app.globalData.makerspaces = makerspaces
         page.setData({
           makerspaces
         })
@@ -109,7 +108,7 @@ Page({
     // console.log(e)
     let makerspace_id=e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: `/pages/onespace/onespace?id=${makerspace_id}`,
+      url: `/pages/makerspace_one/makerspace_one?id=${makerspace_id}`,
     })
   }
 })

@@ -10,7 +10,7 @@
           <image src="{{project.photo_url}}"/>
           <text class="sub-header">{{project.level}}</text>
           <h4>{{project.name}}</h4>
-          <text class="sub-text">{{project.description}}</text>
+          <text class="sub-text">Preparation time: {{project.preparation_time}}</text>
         </view>
       </block>      
     </view>

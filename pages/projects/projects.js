@@ -17,7 +17,9 @@ Page({
     const page = this
     const options = {
       success: function (res) {
+        console.log(res)
         const projects = res.data.projects
+        getApp().globalData.projects = projects
         page.setData({
           projects
         })
@@ -98,9 +100,10 @@ Page({
       url: '/pages/index/index',
     })
   },
-  handleClick: function () {
+  handleClick: function (e) {
+    let project_id = e.currentTarget.dataset.id
     wx.reLaunch({
-      url: '/pages/project_details/project_details',
+      url: `/pages/oneproject/oneproject?id=${project_id}`
     })
   }
 })

@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="individual-equip">
+      <view>
+        <image class="pic" src="{{equipment.photo_url}}"/>
+      </view>
+  </view>
+
+  <view class="box-element">
+    <h4>{{equipment.name}}</h4>
+    <text>{{equipment.description}}</text>
+  </view>
+
+    <view class="box-element">
+    <h4>Instruction video</h4>
+    <text>Hereunder is a brief introduction video about your power tool</text>
+    <video src="{{equipment.video_url}}"/>
+  </view>
+</view>
