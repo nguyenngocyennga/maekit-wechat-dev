@@ -1,160 +1,153 @@
 {
-	"description": "Project configuration file",
-	"packOptions": {
-		"ignore": []
-	},
-	"setting": {
-		"urlCheck": true,
-		"es6": true,
-		"postcss": true,
-		"minified": true,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.8.0",
-	"appid": "wx812171fc1672ffa0",
-	"projectname": "maekit-wechat-dev",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
-	"condition": {
-		"search": {
-			"current": -1,
-			"list": []
-		},
-		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
-		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"miniprogram": {
-			"current": 14,
-			"list": [
-				{
-					"id": -1,
-					"name": "pages/project_ingredients/project_ingredients",
-					"pathName": "pages/project_ingredients/project_ingredients",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/projects/projects",
-					"pathName": "pages/projects/projects",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/makerspaces/makerspaces",
-					"pathName": "pages/makerspaces/makerspaces",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/maps/maps",
-					"pathName": "pages/maps/maps",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/makerspaces/makerspaces",
-					"pathName": "pages/makerspaces/makerspaces",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/onespace/onespace",
-					"pathName": "pages/onespace/onespace",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/equipments/equipments",
-					"pathName": "pages/equipments/equipments",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/equipments/equipments",
-					"pathName": "pages/equipments/equipments",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/onespace/onespace",
-					"pathName": "pages/oneequip/oneequip",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/maps/maps",
-					"pathName": "pages/maps/maps",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/oneequip/oneequip",
-					"pathName": "pages/oneequip/oneequip",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/bookings/bookings",
-					"pathName": "pages/bookings/bookings",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/confirm_message/confirm_message",
-					"pathName": "pages/confirm_message/confirm_message",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/one_equip/one_equip",
-					"pathName": "pages/one_equip/one_equip",
-					"scene": null
-				}
-			]
-		}
-	}
+  "description": "Project configuration file",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "autoAudits": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.8.0",
+  "appid": "wx812171fc1672ffa0",
+  "projectname": "maekit-wechat-dev",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 13,
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/project_ingredients/project_ingredients",
+          "pathName": "pages/project_ingredients/project_ingredients",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/projects/projects",
+          "pathName": "pages/projects/projects",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/makerspaces/makerspaces",
+          "pathName": "pages/makerspaces/makerspaces",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/maps/maps",
+          "pathName": "pages/maps/maps",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/makerspaces/makerspaces",
+          "pathName": "pages/makerspaces/makerspaces",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/onespace/onespace",
+          "pathName": "pages/onespace/onespace",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/equipments/equipments",
+          "pathName": "pages/equipments/equipments",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/equipments/equipments",
+          "pathName": "pages/equipments/equipments",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/onespace/onespace",
+          "pathName": "pages/oneequip/oneequip",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/maps/maps",
+          "pathName": "pages/maps/maps",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/oneequip/oneequip",
+          "pathName": "pages/oneequip/oneequip",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/bookings/bookings",
+          "pathName": "pages/bookings/bookings",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/confirm_message/confirm_message",
+          "pathName": "pages/confirm_message/confirm_message",
+          "scene": null
+        }
+      ]
+    }
+  }
 }

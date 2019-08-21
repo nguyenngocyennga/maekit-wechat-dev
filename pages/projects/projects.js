@@ -18,6 +18,7 @@ Page({
     const page = this
     const options = {
       success: function (res) {
+        console.log(res)
         const projects = res.data.projects
         app.globalData.projects = projects
         page.setData({

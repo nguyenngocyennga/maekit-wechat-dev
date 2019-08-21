@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="individual-equip">
+      <view>
+        <view><h3>{{makerspace.name}}</h3></view>
+      </view>
+      <image class="pic" src="{{makerspace.photo_url}}"/>
+  </view>
+
+  <view class="box-element">
+    <h3>{{makerspace.location}}</h3>
+    <text>{{makerspace.address}}</text>
+    <h4>{{makerspace.phone_number}}</h4>
+    <text>{{makerspace.description}}</text>
+  </view>
+</view>
