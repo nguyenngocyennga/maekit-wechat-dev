@@ -48,7 +48,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 13,
 			"list": [
 				{
 					"id": -1,
@@ -131,6 +131,20 @@
 					"id": -1,
 					"name": "pages/oneequip/oneequip",
 					"pathName": "pages/oneequip/oneequip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/oneproject/oneproject",
+					"pathName": "pages/oneproject/oneproject",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/onequip/onequip",
+					"pathName": "pages/onequip/onequip",
 					"scene": null
 				}
 			]

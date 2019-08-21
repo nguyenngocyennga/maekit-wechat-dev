@@ -4,7 +4,10 @@
     "pages/logs/logs",
     "pages/makerspaces/makerspaces",
     "pages/equipments/equipments",
-    "pages/projects/projects"
+    "pages/projects/projects",
+    "pages/oneproject/oneproject",
+    "pages/onequip/onequip",
+    "pages/makerspace_one/makerspace_one"
     ],
   "window": {
     "backgroundTextStyle": "light",
