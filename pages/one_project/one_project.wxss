@@ -10,18 +10,18 @@ h3 {
 }
 
 text {
-  font-size: 29rpx;
+  font-size: 30rpx;
+}
+
+.project-steps {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .step-image {
   border-radius: 5rpx;
   margin-bottom: 15rpx;
   width: 100%;
-}
-
-.project-steps {
-  display: flex;
-  flex-direction: column-reverse;
 }
 
 .step-box {

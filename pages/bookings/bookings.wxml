@@ -2,17 +2,16 @@
 <view class="container">
 
   <view class="box-container">   
-    <h3>Pick Your Preffered MakerSpace</h3>
+    <h4>Preview of Makerspace's Location</h4>
     <view class="map-box">
       <map longitude="{{longitude}}" latitude="{{latitude}}" scale="{{sc}}" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
     </view>
   </view>
 
   <view class="box-container">
-    <h4>* Required</h4>
 
-    <h3>Project Name</h3>
-    <input placeholder-class="input-placeholder" type="text" bindinput="handleChange" data-name="projectName" placeholder="LED Ring"/>
+    <h3>Workshop: {{project.name}}</h3>
+    <view class="project-photo"><image mode="aspectFill" src="{{project.photo_url}}"/></view>
 
     <h3>Contact Name</h3>
     <input placeholder-class="input-placeholder" type="text" bindinput="handleChange" data-name="contactName" placeholder="Simon Chee"/>
@@ -27,7 +26,9 @@
     <input placeholder-class="input-placeholder" type="number" bindinput="handleChange" data-name="numberStudents" placeholder="12 cool kids"/>
 
     <h3>Preferred MakerSpace</h3>
-    <input placeholder-class="input-placeholder" type="text" bindinput="handleChange" data-name="makerspace" placeholder="MakerSpace"/>
+    <picker bindchange="bindMakerspaceChange" value="{{makerspaceIndex}}" range="{{makerspaces}}">
+      <button class="input">{{makerspaces[makerspaceIndex]}}</button>
+    </picker>
 
     <h3>Preferred Date Range</h3>
     <view class="view-2columns">

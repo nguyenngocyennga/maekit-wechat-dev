@@ -9,7 +9,7 @@ h3 {
 }
 
 text {
-  font-size: 29rpx;
+  font-size: 30rpx;
 }
 
 .box-element {

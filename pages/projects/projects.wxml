@@ -11,7 +11,7 @@
           <text class="sub-header">{{project.level}}</text>
           <h4>{{project.name}}</h4>
           <text class="sub-text">{{project.tagline}}</text>
-          <text class="sub-text">Preparation time: {{project.preparation_time}}</text>
+          <!-- <text class="sub-text">Preparation time: {{project.preparation_time}}</text> -->
         </view>
       </block>      
     </view>

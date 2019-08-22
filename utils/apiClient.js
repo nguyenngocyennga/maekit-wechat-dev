@@ -1,4 +1,5 @@
 const baseUrl = "https://makit.wogengapp.cn/api/v1/"
+// const baseUrl = "http://localhost:3000/api/v1/"
 
 // MAKERSPACES
 
@@ -82,8 +83,9 @@ const getEquipments = (options) => {
 
 const getBookings = (options) => {
   const { success, fail } = options
+  const user_id = getApp().globalData.user
   return wx.request({
-    url: baseUrl + "bookings",
+    url: baseUrl + `bookings?user=${user_id}`,
     method: "get",
     success,
     fail

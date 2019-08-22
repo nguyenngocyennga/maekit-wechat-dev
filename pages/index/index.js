@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+import apiClient from "../../utils/apiClient.js"
 const app = getApp()
 
 Page({
@@ -12,31 +13,61 @@ Page({
     interval: 5000,
     duration: 1000
   },
-  changeIndicatorDots: function (e) {
-    this.setData({
-      indicatorDots: !this.data.indicatorDots
-    })
-  },
-  changeAutoplay: function (e) {
-    this.setData({
-      autoplay: !this.data.autoplay
-    })
-  },
-  intervalChange: function (e) {
-    this.setData({
-      interval: e.detail.value
-    })
-  },
-  durationChange: function (e) {
-    this.setData({
-      duration: e.detail.value
-    })
-  },
+  // changeIndicatorDots: function (e) {
+  //   this.setData({
+  //     indicatorDots: !this.data.indicatorDots
+  //   })
+  // },
+  // changeAutoplay: function (e) {
+  //   this.setData({
+  //     autoplay: !this.data.autoplay
+  //   })
+  // },
+  // intervalChange: function (e) {
+  //   this.setData({
+  //     interval: e.detail.value
+  //   })
+  // },
+  // durationChange: function (e) {
+  //   this.setData({
+  //     duration: e.detail.value
+  //   })
+  // },
 
 
   onLoad: function () {
-
+    
   },
+
+  fetchBookings: function (options) {
+    console.log("bookings fetch called")
+    apiClient.getBookings(options)
+  },
+
+  onReady: function() {
+    const page = this
+    const options = {
+      success: function (res) {
+        console.log(res)
+        const bookings = res.data.bookings
+
+        app.globalData.bookings = bookings
+        console.log("BOOKING", bookings)
+        page.setData({
+          bookings
+        })
+      },
+
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+    
+    setTimeout(function () { page.fetchBookings(options) }, 1500);
+  },
+
+  
+
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

@@ -1,4 +1,7 @@
 // pages/bookings/bookings.js
+import apiClient from "../../utils/apiClient.js"
+const app = getApp()
+
 Page({
 
   /**
@@ -7,8 +10,9 @@ Page({
   data: {
     // lt: "30.65984",
     // lg: "104.10194", //"makerspace.longitude",// wait to database
-    dateArrival: new Date(),
-    dateDeparture: new Date(),
+    dateArrival: new Date().toLocaleDateString('zh-CN'),
+    dateDeparture: new Date().toLocaleDateString('zh-CN'),
+    makerspaceIndex: 0,
     sc: '11',
     mk: [
       {
@@ -99,8 +103,18 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    const that = this
-    console.log(Date(Date.now()).toString())
+    let page = this;
+    let project_id = options.id;
+
+    const project_array = app.globalData.projects
+    let oneproject = project_array.filter(project => {
+      return project.id == project_id;
+    })[0]
+
+    page.setData({
+      project: oneproject
+    })
+
     wx.getLocation({
       type: 'GCJ-02',
       success: function (res) {
@@ -108,8 +122,41 @@ Page({
         const longitude = res.longitude
         const speed = res.speed
         const accuracy = res.accuracy
-        that.setData({ latitude, longitude, speed, accuracy })
+        page.setData({ latitude, longitude, speed, accuracy })
       }
+    })
+
+    const spaceOptions = {
+      success: function (res) {
+        console.log(res)
+        const makerspaces_array = res.data.makerspaces
+        let makerspaces = []
+        makerspaces_array.forEach (function(e) {
+          let makerspace_name = e.name
+          let makerspace_location = e.location
+          let makerspace = `${makerspace_name} @ ${makerspace_location}`
+          makerspaces.push(makerspace)
+        })
+        
+        page.setData({
+          makerspaces,
+          makerspaces_array 
+        })
+      },
+
+      fail: function (err) {
+        console.log(err)
+      }
+    }
+
+    apiClient.getMakerspaces(spaceOptions)
+  },
+
+  bindMakerspaceChange: function (e) {
+    console.log('picker makerspace', e.detail.value);
+
+    this.setData({
+      makerspaceIndex: e.detail.value
     })
   },
 
@@ -139,23 +186,28 @@ Page({
 
   goToConfirm: function (e) {
     const page = this
-    const project = page.data.projectName
+    console.log(page.data)
+    const project_id = page.data.project.id
+    const makerspaceIndex = page.data.makerspaceIndex
+    const makerspace_id = page.data.makerspaces_array[makerspaceIndex].id
+    console.log("GD", app.globalData)
+    const user_id = app.globalData.user
     const name = page.data.contactName
     const email = page.data.email
     const phone_number = page.data.phoneNumber
     const number_students = page.data.numberStudents
-    const makerspace = page.data.makerspace
     const about_kids = page.data.aboutKids
     const other_message = page.data.otherMessage
     const from_date = page.data.dateArrival
     const to_date = page.data.dateDeparture
     const newBooking = {
-      project,
+      project_id,
+      makerspace_id,
+      user_id,
       name,
       email,
       phone_number,
       number_students,
-      makerspace,
       about_kids,
       other_message,
       from_date,
@@ -163,7 +215,8 @@ Page({
     }
 
     wx.request({
-      url: `http://localhost:3000/api/v1/bookings`,
+      url: `https://makit.wogengapp.cn/api/v1/bookings/`,
+      // url: `http://localhost:3000/api/v1/bookings/`,
       method: 'post',
       data: newBooking,
       success(res) {

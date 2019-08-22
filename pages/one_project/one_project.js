@@ -79,10 +79,11 @@ Page({
   onShareAppMessage: function () {
 
   },
-  goToBooking: function () {
-    
+  goToBooking: function (e) {
+    let page = this
+    let project_id = page.data.id;
     wx.navigateTo({
-      url: '/pages/bookings/bookings',
+      url: `/pages/bookings/bookings?id=${project_id}`,
     })
   },
   goToMakerspaces: function () {

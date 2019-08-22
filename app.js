@@ -7,7 +7,8 @@ App({
 
     wx.login({
       success: res => {
-        const baseUrl = 'https://makit.wogengapp.cn/api/v1/'
+        // const baseUrl = 'http://localhost:3000/api/v1/'
+        const baseUrl = "https://makit.wogengapp.cn/api/v1/"
         console.log('beginning login')
         wx.request({
           url: baseUrl + 'login/',
@@ -16,7 +17,8 @@ App({
             code: res.code
           },
           success: (res) => {
-            this.globalData.user = res.data.user
+            console.log("app.js LINEEEEE 19", res)
+            this.globalData.user = res.data.userId
             console.log("app.js > app.globalData.user (User in DB):", this.globalData.user)
           }
         })

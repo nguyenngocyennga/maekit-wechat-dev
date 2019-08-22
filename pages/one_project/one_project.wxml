@@ -9,10 +9,14 @@ style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('
     <text>Preparation Time: {{project.preparation_time}}</text>
     <h3>What's the fun?</h3>
     <text>{{project.description}}</text>
-    <view class="step-box">
-      <h4>VIDEO TUTORIAL</h4>
-      <video src="{{project.video_url}}"></video>
+    
+    <view wx:if="{{project.video_url}}">
+      <view class="step-box">
+        <h4>VIDEO TUTORIAL</h4>
+        <video mode="aspectFill" src="{{project.video_url}}"></video>
+      </view>
     </view>
+
     <view class="project-steps">
         <block wx:for="{{project.project_steps}}" wx:for-item="step" wx:key="index">
           <view class="step-box">

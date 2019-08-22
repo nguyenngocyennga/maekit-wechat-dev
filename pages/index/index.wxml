@@ -56,6 +56,20 @@
       </view>
     </view>
   </view>
+
+  <view wx:if="{{bookings !== []}}">
+    <h3>My workshop requests</h3>
+    <view class="project-steps">
+        <block wx:for="{{bookings}}" wx:for-item="booking" wx:key="index">
+          <view class="step-box">
+            <image class="step-image" mode="aspectFill" src="{{booking.project.photo_url}}"/>
+            <h4>Project: {{booking.project.name}}</h4>
+            <text class="booking-request-text">Date range: {{booking.from_date}} to {{booking.to_date}}</text>
+            <text class="booking-request-text">Preferred makerspace: {{booking.makerspace.name}}</text>
+          </view>
+        </block>
+    </view>
+  </view>
 </view>
 
 

@@ -4,7 +4,7 @@ h2 {
   font-family: 'Gill Sans MT';
   font-weight: bold;
   font-size: 44rpx;
-  color: #FFFFFF;
+  color: #0fe0e7;
   position: absolute;
   left: 50rpx;
   bottom: 50rpx;
@@ -47,6 +47,14 @@ input, textarea {
   padding: 20rpx;
 }
 
+.input {
+  background: #FFFFFF;
+  border: 1rpx solid #E1E7ED;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
 input::hover {
   border: 1rpx solid  #0fe0e7;
 }
@@ -72,4 +80,22 @@ input::hover {
 .input-placeholder {
   font-size: 30rpx;
   color: rgba(180, 180, 180, 0.822);
+  text-align: left;
+}
+
+.input {
+  font-size: 30rpx;
+  text-align: left;
+}
+
+.project-photo {
+  border: 1rpx dashed #0fe0e7;
+  border-radius: 5rpx;
+  padding: 15rpx;
+  margin: 15rpx 0;
+}
+
+image {
+  border-radius: 5rpx;
+  width: 100%;
 }
