@@ -7,8 +7,14 @@ style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('
   <view class="box-element">
     <text>LEVEL: {{project.level}}</text>
     <text>Preparation Time: {{project.preparation_time}}</text>
+
     <h3>What's the fun?</h3>
     <text>{{project.description}}</text>
+
+    <h3>Materials</h3>
+      <block wx:for="{{project.materials}}" wx:for-item="material" wx:key="index">
+        <text>{{material.name}}</text>
+      </block>
     
     <view wx:if="{{project.video_url}}">
       <view class="step-box">

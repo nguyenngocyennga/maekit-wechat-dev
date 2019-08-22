@@ -24,7 +24,7 @@ Page({
       return project.id == project_id;
     })[0]
 
-    // console.log(oneproject)
+    console.log(oneproject)
     page.setData({
       id: project_id,
       project: oneproject
