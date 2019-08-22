@@ -57,7 +57,7 @@
     </view>
   </view>
 
-  <view wx:if="{{bookings !== []}}">
+  <view wx:if="{{bookings}}">
     <h3>My workshop requests</h3>
     <view class="project-steps">
         <block wx:for="{{bookings}}" wx:for-item="booking" wx:key="index">

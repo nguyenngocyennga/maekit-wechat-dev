@@ -5,13 +5,7 @@ const app = getApp()
 
 Page({
   data: {
-    imgUrls: ['https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/94230d1687cf1d580095/LED%20Ring%20-%20Rev%204.png',
-      'https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/ff3518aa76030a750804/Wired%20up%20Stationery%20-%20Rev%201.jpg', 'https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/4b5556795d8c3215f15e/Sew%20LED%20Torch%20Rev%202.png'
-    ],
-    indicatorDots: false,
-    autoplay: false,
-    interval: 5000,
-    duration: 1000
+    bookings: false
   },
   // changeIndicatorDots: function (e) {
   //   this.setData({
@@ -50,12 +44,13 @@ Page({
       success: function (res) {
         console.log(res)
         const bookings = res.data.bookings
-
-        app.globalData.bookings = bookings
         console.log("BOOKING", bookings)
-        page.setData({
-          bookings
-        })
+        if (bookings.length > 0) {
+          page.setData({
+            bookings
+          })
+        }
+        
       },
 
       fail: function (err) {
