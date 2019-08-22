@@ -9,4 +9,6 @@
         <h4>{{makerspace.phone_number}}</h4>
         <text>{{makerspace.description}}</text>
   </view>
+
+   <map longitude="{{makerspace.longtitude}}" latitude="{{makerspace.latitude}}" scale="12" style="width: 100%; height: 40vh;" markers="{{mk}}"> </map>
 </view>

@@ -13,8 +13,8 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    let page = this;
-    let makerspace_id = options.id;
+    let page = this
+    let makerspace_id = options.id
     // console.log(options.id)
     const space_array = app.globalData.makerspaces
     let onespace = space_array.filter(space => {
@@ -23,11 +23,24 @@ Page({
       // makerspace_id is string while space.id is integer
       return space.id == makerspace_id;
     })[0]
+    let latitude = onespace.latitude
+    let longitude = onespace.longtitude
 
     // console.log(onespace)
     page.setData({
       id: makerspace_id,
-      makerspace: onespace
+      makerspace: onespace,
+      mk: [
+        {
+          iconPath: "/images/icons/map-flag.png",
+          id: 0,
+          latitude: latitude,
+          longitude: longitude,
+          width: 40,
+          height: 40,
+          callout: { content: "XMaker\n Chengdu, China", fontSize: 15, color: "#000000", padding: 5 }
+        }
+      ]
     })
   },
 
