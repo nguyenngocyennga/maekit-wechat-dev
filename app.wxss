@@ -113,7 +113,7 @@ width: 70rpx;
   margin-bottom: 30rpx;
 }
 
-.footer-links {
+/* .footer-links {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-between;
@@ -137,7 +137,7 @@ width: 70rpx;
   width: 60rpx;
   height: 60rpx;
   opacity: 0.7;
-}
+} */
 
 .icon-text {
   color: #37474F;
