@@ -13,9 +13,10 @@ style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url('
 
     <h3>Materials</h3>
       <block wx:for="{{project.materials}}" wx:for-item="material" wx:key="index">
-        <text>{{material.name}}</text>
+        <text>✓ {{material.name}}</text>
       </block>
     
+    <h3>Instructions</h3>
     <view wx:if="{{project.video_url}}">
       <view class="step-box">
         <h4>VIDEO TUTORIAL</h4>

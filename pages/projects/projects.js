@@ -14,9 +14,11 @@ Page({
   /**
    * Lifecycle function--Called when page load
    */
-  onLoad: function () {
+  onLoad: function (urlOptions) {
+    const { query } = urlOptions
     const page = this
     const options = {
+      query,
       success: function (res) {
         console.log(res)
         const projects = res.data.projects
@@ -81,24 +83,15 @@ Page({
   onShareAppMessage: function () {
 
   },
-  goToProjects: function () {
+  viewEachCategory: function (e) {
+    let category = e.currentTarget.dataset.category
+    wx.reLaunch({
+      url: `/pages/projects/projects?query=${category}`,
+    })
+  },
+  viewAllProjects: function () {
     wx.reLaunch({
       url: '/pages/projects/projects',
-    })
-  },
-  goToEquipments: function () {
-    wx.reLaunch({
-      url: '/pages/equipments/equipments',
-    })
-  },
-  goToFind: function () {
-    wx.reLaunch({
-      url: '/pages/makerspaces/makerspaces',
-    })
-  },
-  goToHome: function () {
-    wx.reLaunch({
-      url: '/pages/index/index',
     })
   },
   handleClick: function (e) {

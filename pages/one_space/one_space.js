@@ -25,6 +25,7 @@ Page({
     })[0]
     let latitude = onespace.latitude
     let longitude = onespace.longtitude
+    let content = onespace.name
 
     // console.log(onespace)
     page.setData({
@@ -38,7 +39,7 @@ Page({
           longitude: longitude,
           width: 40,
           height: 40,
-          callout: { content: "XMaker\n Chengdu, China", fontSize: 15, color: "#000000", padding: 5 }
+          callout: { content: content, fontSize: 15, color: "#000000", padding: 5 }
         }
       ]
     })

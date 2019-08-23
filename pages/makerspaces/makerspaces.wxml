@@ -1,5 +1,11 @@
 <view class="container">
   <view class="box-element">
+    <h3 style="padding-bottom: 10rpx;"></h3>
+
+    <view class="map-box">
+      <map longitude="{{longitude}}" latitude="{{latitude}}" scale="{{sc}}" style="width: 100%; height: 40vh;" markers="{{mk}}"></map>
+    </view>
+
     <h3 style="padding-bottom: 10rpx;">Cool Makerspaces</h3>
     <view class="view-2columns">
       <block 

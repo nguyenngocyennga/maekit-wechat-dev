@@ -26,9 +26,17 @@ const getMakerspace = options => {
 // PROJECTS 
 
 const getProjects = (options) => {
+  const { query } = options
+  let url = ""
+
+  if(query) {
+    url = baseUrl + `projects?query=${query}`
+  } else {
+    url = baseUrl + "projects"
+  }
   const { success, fail } = options
   return wx.request({
-    url: baseUrl + "projects",
+    url,
     method: "get",
     success,
     fail

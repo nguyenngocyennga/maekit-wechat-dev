@@ -7,27 +7,6 @@ Page({
   data: {
     bookings: false
   },
-  // changeIndicatorDots: function (e) {
-  //   this.setData({
-  //     indicatorDots: !this.data.indicatorDots
-  //   })
-  // },
-  // changeAutoplay: function (e) {
-  //   this.setData({
-  //     autoplay: !this.data.autoplay
-  //   })
-  // },
-  // intervalChange: function (e) {
-  //   this.setData({
-  //     interval: e.detail.value
-  //   })
-  // },
-  // durationChange: function (e) {
-  //   this.setData({
-  //     duration: e.detail.value
-  //   })
-  // },
-
 
   onLoad: function () {
     
@@ -58,7 +37,7 @@ Page({
       }
     }
     
-    setTimeout(function () { page.fetchBookings(options) }, 1500);
+    setTimeout(function () { page.fetchBookings(options) }, 2000);
   },
 
   
@@ -71,9 +50,10 @@ Page({
       hasUserInfo: true
     })
   },
-  goToProjects: function () {
+  goToProjects: function (e) {
+    let category = e.currentTarget.dataset.category
     wx.reLaunch({
-      url: '/pages/projects/projects',
+      url: `/pages/projects/projects?query=${category}`,
     })
   },
   goToEquipments: function () {

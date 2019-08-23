@@ -1,5 +1,42 @@
 <view class="container">
   <view class="box-element">
+    
+    <view class="box-element">
+      <h3 class="viewAllProjects" style="padding-bottom: 10rpx;">Categories</h3>
+      <view class="view-2columns">
+        <view class="tool-icon" bindtap="viewEachCategory" data-category="artsandcrafts">
+          <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/cffc8f554984ecb286ae/arts_and_crafts.png"></image>
+          <text class="tool-text">Arts & crafts</text>
+        </view>
+      
+        <view class="tool-icon" bindtap="viewEachCategory" data-category="woodshop">
+          <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/114922c7535740957179/woodshop.png"></image>
+          <text class="tool-text">Woodshop</text>
+        </view>
+
+        <view class="tool-icon" bindtap="viewEachCategory" data-category="metalshop">
+          <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/7a05426a1b5672ca9789/metalshop.png"></image>
+          <text class="tool-text">Metalshop</text>
+        </view>
+
+        <view class="tool-icon" bindtap="viewEachCategory" data-category="textile">
+          <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/6e6352888d624a82837c/textile.png"></image>
+          <text class="tool-text">Textitle</text>
+        </view>
+
+        <view class="tool-icon" bindtap="viewEachCategory" data-category="electronics">
+          <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/0930aa46a201e9e4990f/electronics.png"></image>
+          <text class="tool-text">Electronics</text>
+        </view>
+
+        <view class="tool-icon" bindtap="viewEachCategory" data-category="programming">
+          <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/07efb29c3781bd627404/computers.png"></image>
+          <text class="tool-text">Programming</text>
+        </view>
+
+      </view>
+    </view>
+
     <h3 style="padding-bottom: 10rpx;">Cool Projects</h3>
     <view class="view-2columns">
       <block 
@@ -8,13 +45,18 @@
         wx:key="index">
         <view class="individual-makerspace" data-id="{{project.id}}" bindtap="handleClick">
           <image mode="aspectFill" src="{{project.photo_url}}"/>
-          <text class="sub-header">{{project.level}}</text>
+          <text class="sub-header">{{project.category_text}} | {{project.level}}</text>
+          <!-- <text class="sub-header">{{project.category_text}}</text> -->
           <h4>{{project.name}}</h4>
           <text class="sub-text">{{project.tagline}}</text>
           <!-- <text class="sub-text">Preparation time: {{project.preparation_time}}</text> -->
         </view>
       </block>      
     </view>
+  </view>
+
+  <view>
+    <button class="button-full" bindtap="viewAllProjects">View all categories</button>
   </view>
 </view>
 

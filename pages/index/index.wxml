@@ -8,52 +8,43 @@
   <view class="box-element">
     <h3>Māk:it</h3>
     <text>Māk:it strives to promote the Maker Movement where students can come together to create, invent, and learn.</text>
-    <text>Cook up fun projects at your local makerspaces using scrap and craft materials, 3D printers, digital fabrication, electronics, and programming tools.
+    <text>Cook up fun projects using scrap and craft materials, 3D printers, digital fabrication, electronics, and programming tools.
     </text>
   </view>
 
   <view class="box-element">
-  <h3>Tools and Equipments</h3>
+  <h3>Project Categories</h3>
     <view class="view-2columns">
-      <view class="tool-icon">
+      <view class="tool-icon" bindtap="goToProjects" data-category="artsandcrafts">
         <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/cffc8f554984ecb286ae/arts_and_crafts.png"></image>
         <text class="tool-text">Arts & crafts</text>
       </view>
     
-      <view class="tool-icon">
+      <view class="tool-icon" bindtap="goToProjects" data-category="woodshop">
         <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/114922c7535740957179/woodshop.png"></image>
         <text class="tool-text">Woodshop</text>
       </view>
 
-      <view class="tool-icon">
+      <view class="tool-icon" bindtap="goToProjects" data-category="metalshop">
         <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/7a05426a1b5672ca9789/metalshop.png"></image>
         <text class="tool-text">Metalshop</text>
       </view>
 
-      <view class="tool-icon">
+      <view class="tool-icon" bindtap="goToProjects" data-category="textile">
         <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/6e6352888d624a82837c/textile.png"></image>
         <text class="tool-text">Textitle</text>
       </view>
 
-      <view class="tool-icon">
+      <view class="tool-icon" bindtap="goToProjects" data-category="electronics">
         <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/0930aa46a201e9e4990f/electronics.png"></image>
         <text class="tool-text">Electronics</text>
       </view>
 
-      <view class="tool-icon">
+      <view class="tool-icon" bindtap="goToProjects" data-category="programming">
         <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/07efb29c3781bd627404/computers.png"></image>
         <text class="tool-text">Programming</text>
       </view>
 
-      <view class="tool-icon">
-        <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/40f2f5eae0501b431ae8/laser_cutter.png"></image>
-        <text class="tool-text">Laser Cutter</text>
-      </view>
-
-      <view class="tool-icon">
-        <image class="icon" src="https://avos-cloud-dycrb1wrauoc.s3.amazonaws.com/54ca66d2aaaabf2bead8/welding.png"></image>
-        <text class="tool-text">Soldering</text>
-      </view>
     </view>
   </view>
 
