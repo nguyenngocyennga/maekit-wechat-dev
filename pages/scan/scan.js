@@ -12,6 +12,28 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    const page = this
+    const equipments = getApp().globalData.equipments
+
+    wx.scanCode({
+      onlyFromCamera: true,
+      success(res) {
+
+        equipments.scan = res.result
+        console.log(equipments.scan)
+
+        page.setData({
+          qrResult: equipments.scan
+        })
+
+        wx.navigateTo({
+          url: '/pages/equipment/equipment',
+        })
+      },
+      fail(err) {
+        console.log(err)
+      }
+    })
 
   },
 
