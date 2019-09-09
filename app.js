@@ -7,8 +7,8 @@ App({
 
     wx.login({
       success: res => {
-        // const baseUrl = 'http://localhost:3000/api/v1/'
-        const baseUrl = "https://makit.wogengapp.cn/api/v1/"
+        const baseUrl = 'http://localhost:3000/api/v1/'
+        // const baseUrl = "https://makit.wogengapp.cn/api/v1/"
         console.log('beginning login')
         wx.request({
           url: baseUrl + 'login/',

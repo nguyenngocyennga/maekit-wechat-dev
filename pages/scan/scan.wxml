@@ -1,2 +1,2 @@
 <!--pages/scan/scan.wxml-->
-<view>{{qrResult}}</view>
+<!-- <view>{{qrResult}}</view> -->

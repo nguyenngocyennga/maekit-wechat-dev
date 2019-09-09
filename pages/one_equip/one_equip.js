@@ -14,11 +14,14 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    let page = this;
-    let equip_id = options.id;
+    let page = this
+    let equip_id = options.id
+    console.log('OPTIONS', options)
+    let qrResult = options.scan
     const equip_array = app.globalData.equipments
     let oneequip = equip_array.filter(equip => {
-      return equip.id == equip_id;
+      return equip.id == equip_id
+      return equip.scan == qrResult
     })[0]
 
     page.setData({

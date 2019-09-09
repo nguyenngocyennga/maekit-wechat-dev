@@ -1,4 +1,6 @@
 // pages/scan/scan.js
+import apiClient from "../../utils/apiClient.js"
+
 Page({
 
   /**
@@ -20,14 +22,15 @@ Page({
       success(res) {
 
         equipments.scan = res.result
+        console.log(equipments)
         console.log(equipments.scan)
 
         page.setData({
           qrResult: equipments.scan
         })
 
-        wx.navigateTo({
-          url: '/pages/equipment/equipment',
+        wx.reLaunch({
+          url: `/pages/one_equip/one_equip?query=${qrResult}`,
         })
       },
       fail(err) {

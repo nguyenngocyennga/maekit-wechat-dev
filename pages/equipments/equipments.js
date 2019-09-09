@@ -19,6 +19,7 @@ Page({
       success: function (res) {
         const equipments = res.data.equipments
         app.globalData.equipments = equipments
+        console.log(equipments)
         page.setData({
           equipments
         })
@@ -97,6 +98,11 @@ Page({
   goToHome: function () {
     wx.reLaunch({
       url: '/pages/index/index',
+    })
+  },
+  goToScanner: function () {
+    wx.navigateTo({
+      url: '/pages/scan/scan',
     })
   },
   handleClick: function (e) {
