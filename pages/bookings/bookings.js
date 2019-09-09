@@ -215,8 +215,8 @@ Page({
     }
 
     wx.request({
-      url: `https://makit.wogengapp.cn/api/v1/bookings/`,
-      // url: `http://localhost:3000/api/v1/bookings/`,
+      // url: `https://makit.wogengapp.cn/api/v1/bookings/`,
+      url: `http://localhost:3000/api/v1/bookings/`,
       method: 'post',
       data: newBooking,
       success(res) {

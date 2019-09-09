@@ -1,0 +1,10 @@
+.button-full {
+  background-color: white;
+  border-radius: 10rpx;
+  color: #0fe0e7;
+  border: 1rpx solid #0fe0e7;
+  font-weight: 600;
+  font-size: 34;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+}

@@ -9,7 +9,8 @@
     "pages/one_equip/one_equip",
     "pages/one_space/one_space",
     "pages/bookings/bookings",
-    "pages/confirm_message/confirm_message"
+    "pages/confirm_message/confirm_message",
+    "pages/scan/scan"
     ],
   "window": {
     "backgroundTextStyle": "light",

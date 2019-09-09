@@ -1,6 +1,11 @@
 <view class="container">
   <view class="box-element">
     <h3 style="padding-bottom: 10rpx;">Cool Equipments</h3>
+
+  <view>
+    <button class="button-full" bindtap="goToScanner">Scan the equipment</button>
+  </view>
+
     <view class="view-2columns">
       <block 
         wx:for="{{equipments}}"
@@ -13,6 +18,7 @@
         </view>
       </block>      
     </view>
+    
   </view>
 </view>
 

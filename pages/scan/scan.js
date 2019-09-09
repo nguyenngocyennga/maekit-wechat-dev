@@ -1,5 +1,5 @@
-// pages/one_equip/one_equip.js
-const app = getApp();
+// pages/scan/scan.js
+import apiClient from "../../utils/apiClient.js"
 
 Page({
 
@@ -14,20 +14,30 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-    let page = this
-    let equip_id = options.id
-    console.log('OPTIONS', options)
-    let qrResult = options.scan
-    const equip_array = app.globalData.equipments
-    let oneequip = equip_array.filter(equip => {
-      return equip.id == equip_id
-      return equip.scan == qrResult
-    })[0]
+    const page = this
+    const equipments = getApp().globalData.equipments
 
-    page.setData({
-      id: equip_id,
-      equip: oneequip
+    wx.scanCode({
+      onlyFromCamera: true,
+      success(res) {
+
+        equipments.scan = res.result
+        console.log(equipments)
+        console.log(equipments.scan)
+
+        page.setData({
+          qrResult: equipments.scan
+        })
+
+        wx.reLaunch({
+          url: `/pages/one_equip/one_equip?query=${qrResult}`,
+        })
+      },
+      fail(err) {
+        console.log(err)
+      }
     })
+
   },
 
   /**
